@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Winter Scarves</title>
+
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/main.css">
+
+  <!-- replace with your personal Font Awesome CDN link -->
+  <script src="https://use.fontawesome.com/4c99765dbe.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Hats</a></li>
+        <li><a href="#">Gloves</a></li>
+        <li><a href="#">Scarves</a></li>
+        <li class="cart-info">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </li>
+      </ul>
+    </nav>
+
+    <h1>Winter&nbsp;Wear Warehouse</h1>
+  </header>
+
+  <main>
+    <aside>
+      <form name="sortForm" onsubmit="sort();">
+        <label>Filter By:
+          <select name="filter">
+            <option value="">Choose One</option>
+            <option value="price">Price</option>
+            <option value="name">Name</option>
+          </select>
+        </label>
+
+        <input type="submit" value="Sort">
+      </form>
+    </aside>
+
+    <section>
+      <h2>Scarves</h2>
+
+      <div class="item-container">
+
+        <div class="item">
+          <h3>Reversible Plaid</h3>
+          <img src="images/reversible-plaid_full.jpg" alt="reversible plaid scarf" srcset="images/reversible-plaid_full.jpg 600w, images/reversible-plaid_300.jpg 300w, images/reversible-plaid_90.jpg 90w" sizes="(max-width: 800px) 90px, (max-width: 1600px) 300px, (min-width: 1601px) 600px">
+          <p class="desciption">Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</p>
+          <p class="price">26.99</p>
+        </div>
+
+      </div>
+    </section>
+</main>
+
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
