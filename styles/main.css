@@ -1,0 +1,201 @@
+@charset "utf-8";
+/* My CSS Document */
+
+body {
+  margin: 0px;
+  background-color: #ffffff;
+}
+a:link{
+  background-color: #666666;
+  color: #ffffff;
+  padding: 10px 10px 0px 10px;
+  text-decoration: none;
+}
+a:hover{
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 10px 0px 10px;
+  text-decoration: none;
+}
+
+nav {
+  height: 20px;
+  border-bottom: 5px solid #666666;
+  background-color: #ffffff; 
+}
+
+header {
+    background-color:#cccccc;
+}
+
+li {
+  width: 25%;
+  float: left;
+  text-align: center;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  color: #000000;
+	font-size: 14px;
+	font-style: bold;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 24px;
+}
+
+h1 {
+  color: #666666;
+  text-align: center;
+  font-family: 'Fjalla One', Arial Black, Arial Bold, Gadget, sans-serif;
+  font-size: 48px; 
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 60px;
+}
+
+h2 {
+  color: #333333;
+  text-align: left;
+  font-family: 'Fjalla One', Arial Black, Arial Bold, Gadget, sans-serif;
+	font-size: 35px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 42px;
+}
+
+h3 {
+  color: #666666;
+  text-align: center;
+  font-family: 'Fjalla One', Arial Black, Arial Bold, Gadget, sans-serif;
+	font-size: 35px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 42px;
+}
+
+main {
+  border-top: 5px solid #666666;
+  background-color:#ffffff;
+  padding:20px;
+}
+
+section {
+  padding: 20px;
+  background-color:#ffffff;
+}
+
+.item-container {
+  max-width: 340px;
+  min-width: 100px;
+  border: 2px dashed #cccccc;
+  padding: 20px;
+  float: left;
+  background-color: #ffffff;
+  margin: 20px;
+}
+
+.cart-info {
+  float: right;
+}
+
+.item {
+  max-width:340px;
+  min-width: 100px;
+  text-align: center;
+}
+
+.desciption {
+  color: #666666;
+  text-align: left;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 200;
+	line-height: 24px;
+  font-style: italic;
+}
+
+.price {
+  color: #000000;
+  text-align: left;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	line-height: 28px;
+}
+
+.scarfIMG {
+  width: 100%;
+  max-width: 300px; 
+}
+
+@media only screen and (max-width: 320px) {
+aside {
+  text-align: center;
+  }
+h1 {
+  color: #666666;
+  text-align: center;
+  font-family: 'Fjalla One', Arial Black, Arial Bold, Gadget, sans-serif;
+  font-size: 32px; 
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 35px;
+  }
+h2 {
+  color: #333333;
+  text-align: center;
+  font-family: 'Fjalla One', Arial Black, Arial Bold, Gadget, sans-serif;
+	font-size: 35px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 42px;
+  }
+h3 {
+  color: #666666;
+  text-align: left;
+  font-family: 'Fjalla One', Arial Black, Arial Bold, Gadget, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 32px;
+  }  
+.desciption {
+  color: #666666;
+  text-align: left;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 22px;
+  font-style: italic;
+  }
+.price {
+  color: #000000;
+  text-align: left;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	line-height: 24px;
+  }
+.item-container {
+  max-width: 320px;
+  min-width: 100px;
+  border: 2px dashed #cccccc;
+  padding: 10px;
+  float: left;
+  background-color: #ffffff;
+  margin: 10px;
+  }
+}
+
