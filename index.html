@@ -10,6 +10,29 @@
 
   <!-- replace with your personal Font Awesome CDN link -->
   <script src="https://use.fontawesome.com/4c99765dbe.js"></script>
+  
+  <style>
+  .btn {
+  border: 0px;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 12px;
+  background: #000000;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  width: 120px;
+  margin: 4px 4px;
+}
+
+.btn:hover {
+  background: #666666;
+  text-decoration: none;
+    }
+</style>
+
 </head>
 
 <body>
@@ -20,7 +43,7 @@
         <li><a href="#">Gloves</a></li>
         <li><a href="#">Scarves</a></li>
         <li class="cart-info">
-          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <i id="cartIcon" onclick="showCart()"  class="fa fa-shopping-cart" aria-hidden="true"></i>
         </li>
       </ul>
     </nav>
@@ -30,26 +53,35 @@
 
   <main>
     <aside>
-      <form name="sortForm" onsubmit="sort();">
-        <label>Filter By:
-          <select name="filter">
+     <form name="filterForm" onsubmit="captureFilter();">
+        <label>Sort By:
+          <select name="sortBy">
             <option value="">Choose One</option>
             <option value="price">Price</option>
             <option value="name">Name</option>
           </select>
         </label>
-        <input type="submit" value="Sort">
+        <input type="submit" value="Update">
       </form>
     </aside>
 
     <section>
       <h2>Scarves</h2>
+      
+      
+      
       <div class="item-container">
         <div class="item">
           <h3>Reversible Plaid</h3>
           <img src="images/reversible-plaid_300.jpg" alt="Reversible Plaid scarf" class="scarfIMG">
           <p class="desciption">Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</p>
-          <p class="price">$26.99</p>
+          <div class="price" style="float: left;" >$26.99</div> 
+          <form style="float: left;" onsubmit="addCart()" name="cartAdd">
+            <input class="btn" type="submit" value="Add to Cart">
+          </form>
+          <form style="float: left;" onsubmit="removeCart()" name="cartRemove">
+            <input class="btn" type="submit" value="Remove from Cart">
+          </form>
         </div>
       </div>
       <div class="item-container">
@@ -57,7 +89,13 @@
           <h3>Wool Cable Knit</h3>
           <img src="images/wool-cable_300.jpg" alt="Wool Cable Knit scarf" class="scarfIMG">
           <p class="desciption">Warm yourself with this women's natural cable knit scarf, crafted from 100% Merino wool. Imported.</p>
-          <p class="price">$49.99</p>
+          <div class="price" style="float: left;">$49.99</div> 
+          <form style="float: left;" onsubmit="addCart()" name="cartAdd">
+            <input class="btn" type="submit" value="Add to Cart">
+          </form>
+          <form style="float: left;" onsubmit="removeCart()" name="cartRemove">
+            <input class="btn" type="submit" value="Remove from Cart">
+          </form>
         </div>
       </div>
       <div class="item-container">
@@ -65,7 +103,13 @@
           <h3>Northern Lights</h3>
           <img src="images/northern-lights_300.jpg" alt="Northern Lights scarf" class="scarfIMG">
           <p class="desciption">Handmade by women in Agra, sales provide medical and educational support in this remote area of India. Crinkly 100% cotton.</p>
-          <p class="price">$29.99</p>
+          <div class="price" style="float: left;">$29.99</div> 
+          <form style="float: left;" onsubmit="addCart()" name="cartAdd">
+            <input class="btn" type="submit" value="Add to Cart">
+          </form>
+          <form style="float: left;" onsubmit="removeCart()" name="cartRemove">
+            <input class="btn" type="submit" value="Remove from Cart">
+          </form>
         </div>
       </div>
       <div class="item-container">
@@ -73,7 +117,13 @@
           <h3>Ombre Infinity</h3>
           <img src="images/ombre-infinity_300B.jpg" alt="Ombre Infinity scarf" class="scarfIMG">
           <p class="desciption">A dip-dye effect adds color and dimension to a cozy infinity scarf featuring a soft, chunky knit. 100% acrylic.</p>
-          <p class="price">$11.99</p>
+          <div class="price" style="float: left;">$11.99</div> 
+          <form style="float: left;" onsubmit="addCart()" name="cartAdd">
+            <input class="btn" type="submit" value="Add to Cart">
+          </form>
+          <form style="float: left;" onsubmit="removeCart()" name="cartRemove">
+            <input class="btn" type="submit" value="Remove from Cart">
+          </form>
         </div>
       </div>
       <div class="item-container">
@@ -81,7 +131,13 @@
           <h3>Fringed Plaid</h3>
           <img src="images/fringed-plaid_300.jpg" alt="Fringed Plaid" class="scarfIMG">
           <p class="desciption">Generously sized, extra soft and featuring a dazzling fringe, this scarf is rendered in a versatile gray, black and white plaid. Expertly beat the cold with style. 100% acrylic.</p>
-          <p class="price">$18.99</p>
+          <div class="price" style="float: left;">$18.99</div> 
+          <form style="float: left;" onsubmit="addCart()" name="cartAdd">
+            <input class="btn" type="submit" value="Add to Cart">
+          </form>
+          <form style="float: left;" onsubmit="removeCart()" name="cartRemove">
+            <input class="btn" type="submit" value="Remove from Cart">
+          </form>
         </div>
       </div>
       <div class="item-container">
@@ -89,7 +145,13 @@
           <h3>Multi Color</h3>
           <img src="images/multi-color_300.jpg" alt="Multi Color scarf" class="scarfIMG">
           <p class="desciption">The Who What Wear Oversize Color-Block Square Scarf is big, bold, and designed to twist and wrap any way you wish. All the colors of the season are harmonized in this oversize accent, so you can adjust to contrast or match your outfit; soft and lush, it’s your stylish standoff against cold AC and unexpected fall breezes. 100% acrylic</p>
-          <p class="price">$22.99</p>
+          <div class="price" style="float: left;">$22.99</div> 
+          <form style="float: left;" onsubmit="addCart()" name="cartAdd">
+            <input class="btn" type="submit" value="Add to Cart">
+          </form>
+          <form style="float: left;" onsubmit="removeCart()" name="cartRemove">
+            <input class="btn" type="submit" value="Remove from Cart">
+          </form>
         </div>
       </div>
       <div class="item-container">
@@ -97,7 +159,13 @@
           <h3>Etro Paisley-Print Silk</h3>
           <img src="images/etro_300.png" alt="Etro Paisley-Print Silk scarf" class="scarfIMG">
           <p class="desciption">Luxurious silk scarf with subtle paisley pattern. 100% silk</p>
-          <p class="price">$249.99</p>
+          <div class="price" style="float: left;">$249.99</div> 
+          <form style="float: left;" onsubmit="addCart()" name="cartAdd">
+            <input class="btn" type="submit" value="Add to Cart">
+          </form>
+          <form style="float: left;" onsubmit="removeCart()" name="cartRemove">
+            <input class="btn" type="submit" value="Remove from Cart">
+          </form>
         </div>
       </div>
       <div class="item-container">
@@ -105,7 +173,13 @@
           <h3>Ashby Twill</h3>
           <img src="images/twill_300.jpg" alt="Ashby Twill scarf" class="scarfIMG">
           <p class="desciption">Faribault brings you the Ashby Twill Scarf in Natural. Woven with a 'broken' twill technique, the Ashby Twill Scarf has a slight zigzag texture. Made in USA, this timeless scarf is crafted with luxurious merino wool and finished with heather gray fringe. 100% Merino wool</p>
-          <p class="price">$70.99</p>
+          <div class="price" style="float: left;">$70.99</div>
+          <form style="float: left;" onsubmit="addCart()" name="cartAdd">
+            <input class="btn" type="submit" value="Add to Cart">
+          </form>
+          <form style="float: left;" onsubmit="removeCart()" name="cartRemove">
+            <input class="btn" type="submit" value="Remove from Cart">
+          </form>
         </div>
       </div>
     </section>
