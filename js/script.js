@@ -66,3 +66,9 @@ for(var i = 0; i<products.length; i++){
   console.log(products[i].description);
   console.log(products[i].price);
 }
+
+// Cart Stuff
+function cart(){
+  console.log(output);
+  event.preventDefault();
+}
