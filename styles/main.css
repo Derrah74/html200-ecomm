@@ -197,5 +197,28 @@ h3 {
   background-color: #ffffff;
   margin: 10px;
   }
+.btn {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 12px;
+  background: #000000;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  width: 100px;
+  margin: 4px 0px;
+  }
+.btn:hover {
+  background: #666666;
+  text-decoration: none;
+  }
+  .left {
+    float: left;
+  }
+  
 }
+
+
 
